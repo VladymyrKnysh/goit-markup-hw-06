@@ -277,13 +277,20 @@ ul{
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    outline: none;
+    transition: fill 250ms var(--cubic-bezier) ;
+  }
 
+  .modal-button:hover,
+  .modal-button:focus {
+    fill: var(--accent-color);
   }
   .is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
   }
+  /*---------------- Форма модального окна -----------------*/
   .modal-title {
     font-family: 'Roboto';
     font-weight: 700;
@@ -296,14 +303,27 @@ ul{
   }
   .form {
     width: 448px;
-    outline: 1px solid tomato;
+    /* outline: 1px solid tomato; */
   }
   .form>ul {
     margin: 0;
+    
   }
   .form-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px; 
+  }
+  .form-box {
+    position: relative;  
+  }
+  .form-icon {
+    position: absolute;
+   left: 12px;
+   top: 50%;
+   transform: translateY(-50%);
+  transition: fill 250ms var(--cubic-bezier);
+    
   }
   .form-label {
     margin-bottom: 4px;
@@ -317,10 +337,22 @@ ul{
   }
   .form-input {
     height: 40px;
-    margin-bottom: 10px;
+    width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: none;
+    padding-left: 42px;
+    cursor: pointer;
+    transition: border-color 250ms var(--cubic-bezier);
   }
+.form-input:focus+.form-icon {
+  fill: var(--accent-color);
+}
+
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+
   .form-field {
     display: flex;
     flex-direction: column;
@@ -332,6 +364,8 @@ ul{
       border: 1px solid rgba(33, 33, 33, 0.2);
       border-radius: 4px;
       margin-bottom: 20px;
+      outline: none;
+      cursor: pointer;
   }
   .form-textarea::placeholder {
     font-family: 'Roboto';
@@ -341,15 +375,37 @@ ul{
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
-   .l {
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+   .checkbox-label {
+     
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-    /* text-align: center; */
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    margin-left: 8px;
    }
+   .checkbox-link {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+   }
+ 
+  .form-button {
+    padding: 10px 55px;
+  }
+ 
  
 /* ------------------------------------ */
 /* Section */
@@ -548,6 +604,9 @@ address {
   font-style: normal;
  
 }
+.footer-address {
+  margin-right: 70px;
+}
 .address-list {
   margin-top: 20px;
 }
@@ -584,9 +643,10 @@ address {
   display: flex;
   align-items: baseline;
 }
-.footer-address{
-  margin-right: 70px;
+.thumb {
+  margin-right: 93px;
 }
+
 .thumb-text {
   font-weight: 700;
   font-size: 14px;
@@ -621,8 +681,43 @@ address {
 .thumb-link:hover,
 .thumb-link:focus {
   background-color: var(--accent-color);
-  
 }
+/* ------------Подписка на рассылку-------------- */
+  .subscription-form {
+
+  }
+  .subscription-box {
+    display: flex;
+    align-items: baseline;
+  }
+  .subscription-input {
+    margin-top: 20px;
+    height: 50px;
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+  background: #2F303A;
+  outline: none;
+  margin-right: 12px;
+  color: var(--white-color);
+  }
+  .subscription-input::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px; 
+    letter-spacing: 0.03em;
+    
+    color: var(--secondary-white-color);
+  }
+  .subscription-button {
+   width: 200px;
+  }
+
 /* --------projects-----фильтр портфолио------ */
 
 
