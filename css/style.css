@@ -737,13 +737,13 @@ address {
     
     color: var(--secondary-white-color);
   }
-  .subscription-button {
-   width: 200px;
-  }
   .subscription-icon {
-    fill: #000000;
+    margin-left: 10px;
   }
-
+  .subscription-button {
+  padding: 10px 27px;
+  }
+ 
 
 /* --------projects-----фильтр портфолио------ */
 
