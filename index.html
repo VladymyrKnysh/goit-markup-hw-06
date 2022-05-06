@@ -396,7 +396,7 @@
       </section>
     </main>
 
-    <!----------------------------- Футер -------------------------------->
+    <!------------------------------------ ФУТЕР ----------------------------------------->
     <footer class="footer">
       <div class="container box">
            <div class="footer-address">
@@ -412,7 +412,7 @@
           </ul>
           </address>
           </div>
-        
+        <!------------------------------- ПРИСОЕДИНЯЙТЕСЬ ------------------------------->
         
            <div class="thumb">
             <p class="thumb-text">присоединяйтесь</p>
@@ -448,29 +448,29 @@
             
               </ul>
           </div>
-
+        <!-------------------------------- ФОРМА ПОДПИСКИ -------------------------------->
            <form class="subscription-form">
             <label class="thumb-text subscription-label" for="subscription">Подпишитесь на рассылку</label>
             <div class="subscription-box">
               <input class="subscription-input" type="text" name="subscription" id="subscription" placeholder="E-mail">
-              <button class="button subscription-button" type="submit">Подписаться</button>
+              <button class="button subscription-button" type="submit">Подписаться
+              <svg class="subscription-icon" width="24" height="24">
+                <use href="./images/icon-send.svg"></use>
+              </svg>
+            </button>
             </div>
-            
             </form>
             
-          
-
        </div>
     </footer>
 
-
-
-
+           <!-------------------------- БЭКДРОП МОДАЛЬНОЕ ОКНО ---------------------------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-button" data-modal-close>
           <svg class="modal-icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close-modal"></use>
+            </svg>
         </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
@@ -507,7 +507,6 @@
               </div>
           </li>
 
-
           </ul>
 
            <div class="form-field">
@@ -515,20 +514,22 @@
             <textarea class="form-textarea" name="user-comment" id="user-comment" placeholder="Введите текст"></textarea>
            </div>
 
-           <div class="checkbox" >
-              <input class="checkbox-input" type="checkbox" name="rules" value="rules" id="checkbox-input">
-              <label class="checkbox-label" for="checkbox-input">
-                 <span >
-                    <svg class="checkbox-icon" width="11" height="8">
-                      <use href="./images/icons.svg#icon-vector"></use>
-                    </svg>
-                 </span> Соглашаюсь с рассылкой и принимаю <a class="checkbox-link" href="">Условия договора</a> </label>
+         
+           <div class="checkbox">
+             <input class="checkbox-input visually-hidden" type="checkbox" name="rules" value="rules" id="checkbox-input">
+            <label class="checkbox-label" for="checkbox-input">
+              <span class="icon-wrap">
+                <svg class="checkbox-icon" width="16" height=15">
+                  <use href="./images/icons.svg#icon-vector"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю &nbsp; <a class="checkbox-link" href="">Условия договора</a>
+            </label>
            </div>
 
             <button class="button form-button" type="submit">Отправить</button>
         
         </form>
-
       </div>
     </div>
 
@@ -537,5 +538,5 @@
 
   </body>
 </html>
- 
+
 
